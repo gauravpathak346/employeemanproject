@@ -1,0 +1,93 @@
+{% extends 'basee.html' %}
+{% block content %}
+<div class="'jumbotron">
+
+  <div class="alert alert-danger" role="alert">
+
+    <h1 style="color:red ;"><b>404 error: page not found</b></h1>
+  </div>
+
+  <a href="/" type="button" class="btn btn-success"><b>Try again</b></a></button>
+</div>
+
+<style>
+  body {
+    background-image: url(https://i.pinimg.com/originals/78/78/63/787863a56b90d5f42791890a53b368d7.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+</style>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+"""
+@app.route("/key")
+def home():
+    no_of_todos = 5
+    todo=Todo.query.filter_by().all()
+    last=math.floor(len(todo)/int(params['no_of_todos']))
+    page=request.args.get('page')
+    if( not str(page).isnumeric()):
+        page=1
+    todo=todo[page*int(params['no_of_todos']):page*int(params['no_of_todos'])+page*int(params['no_of_todos'])]
+    if (page==1):
+        prev="#"
+        next="/key?number="+str(page+1)
+    elif(page==last):
+        prev="/key?number="+str(page+1)
+        next="#"
+    else:
+        prev="/key?number="+str(page-1)
+        prev="/key?number="+str(page+1)
+    return render_template('index.html',params=params,prev=prev,next=next)
+
+"""
+ -->

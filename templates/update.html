@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="container my-3">
+  <h2><b>Edit Details</b></h2>
+  <form action="/update/{{todo.sno}}" method="POST">
+
+    <div class="row mb-3">
+      <label for="title" class="col-sm-2 col-form-label"><b>Name</b></label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" name="title" id="title" value="{{todo.title}}" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="desc" class="col-sm-2 col-form-label"><b>Email</b></label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" value="{{todo.desc}}" name="desc" id="desc" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <label for="phone" class="col-sm-2 col-form-label"><b>Phone</b></label>
+      <div class="col-sm-6">
+        <input type="Integer" class="form-control" value="{{todo.phone}}" name="phone" id="phone" required>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-success"><b>Edit Detail</b></button>
+
+  </form>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+{% endblock body %}
